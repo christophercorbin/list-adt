@@ -13,6 +13,7 @@ void List::insert(int num, int k)//insert num at k-th position of list
     Node* newPtr = new Node{num};
 
     Node* iPtr = frontPtr;
+    int loc = 0;
 
     if (k == 1)
     {
@@ -20,6 +21,12 @@ void List::insert(int num, int k)//insert num at k-th position of list
 	    frontPtr = newPtr;
 	    return;
     }
+    while (loc !=k)
+    {
+		iPtr= iPtr ->link;
+	loc ++;
+	cout <<"it works ";
+	}
 	     
     for(int i = 1; i < k -1; i++)
 	    iPtr = iPtr->link;
